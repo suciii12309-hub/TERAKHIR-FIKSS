@@ -1,0 +1,219 @@
+<div style="background:#F7F3ED; min-height:100vh; display:flex; align-items:flex-start; justify-content:center; padding:32px 16px; font-family:'Inter','SF Pro Display',sans-serif;">
+
+  <div style="width:393px; height:852px; background:#F7F3ED; border-radius:48px; overflow:hidden; position:relative; border:10px solid #1a1a1a; box-shadow:0 0 0 2px #3a3a3a, 0 32px 64px rgba(0,0,0,0.35); display:flex; flex-direction:column;">
+
+    <!-- Status Bar -->
+    <div style="background:#2C3E2D; padding:14px 28px 10px; display:flex; justify-content:space-between; align-items:center; flex-shrink:0;">
+      <span style="color:#fff; font-size:13px; font-weight:600;">23:59</span>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <svg width="16" height="12" viewBox="0 0 16 12" fill="none"><rect x="0" y="3" width="3" height="9" rx="1" fill="white" opacity="0.5"/><rect x="4.5" y="2" width="3" height="10" rx="1" fill="white" opacity="0.7"/><rect x="9" y="0" width="3" height="12" rx="1" fill="white"/></svg>
+        <svg width="16" height="12" viewBox="0 0 16 12" fill="white"><rect x="1" y="3" width="14" height="8" rx="2" stroke="white" stroke-width="1.2" fill="none"/><rect x="2.5" y="4.5" width="9" height="5" rx="1" fill="white"/></svg>
+      </div>
+    </div>
+
+    <!-- Scrollable Content -->
+    <div style="flex:1; overflow-y:auto; padding-bottom:110px; display:flex; flex-direction:column;">
+
+      <!-- Hero sukses -->
+      <div style="background:#2C3E2D; padding:32px 24px 40px; display:flex; flex-direction:column; align-items:center; position:relative; overflow:hidden;">
+        <!-- Lingkaran dekoratif -->
+        <div style="position:absolute; top:-40px; right:-40px; width:140px; height:140px; border-radius:50%; border:1.5px solid rgba(139,191,106,0.2);"></div>
+        <div style="position:absolute; top:-20px; right:-20px; width:90px; height:90px; border-radius:50%; border:1.5px solid rgba(139,191,106,0.15);"></div>
+
+        <!-- Ikon centang animasi -->
+        <div id="checkCircle" style="width:80px; height:80px; border-radius:50%; background:rgba(139,191,106,0.15); border:2.5px solid #8BBF6A; display:flex; align-items:center; justify-content:center; margin-bottom:18px; animation:popIn 0.5s ease-out;">
+          <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
+            <polyline points="8,20 16,28 30,12" stroke="#8BBF6A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="40" stroke-dashoffset="0" style="animation:drawCheck 0.6s ease-out 0.3s both;"/>
+          </svg>
+        </div>
+
+        <p style="color:#8BBF6A; font-size:12px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; margin:0 0 6px;">Pembayaran Berhasil</p>
+        <h2 style="color:#fff; font-size:22px; font-weight:800; margin:0 0 8px; text-align:center; line-height:1.3;">Pesanan Dikonfirmasi!</h2>
+        <p style="color:rgba(255,255,255,0.6); font-size:13px; margin:0; text-align:center; line-height:1.5;">Terima kasih, Andi. Pesananmu<br>sedang diproses oleh penjual.</p>
+
+        <!-- Nomor order -->
+        <div style="margin-top:20px; background:rgba(255,255,255,0.08); border:1px solid rgba(139,191,106,0.3); border-radius:12px; padding:10px 20px; display:flex; align-items:center; gap:10px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8BBF6A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="9" y1="7" x2="15" y2="7"/><line x1="9" y1="11" x2="15" y2="11"/><line x1="9" y1="15" x2="13" y2="15"/></svg>
+          <span style="color:rgba(255,255,255,0.5); font-size:12px;">No. Pesanan:</span>
+          <span style="color:#fff; font-size:12px; font-weight:700; letter-spacing:0.5px;">#GRN-2026-08471</span>
+        </div>
+      </div>
+
+      <!-- Progress pengiriman -->
+      <div style="padding:20px 20px 4px;">
+        <p style="font-size:13px; font-weight:700; color:#2C3E2D; text-transform:uppercase; letter-spacing:0.3px; margin:0 0 16px;">Status Pengiriman</p>
+
+        <div style="background:#fff; border-radius:16px; padding:16px 18px; border:1.5px solid #e8e2d6; position:relative;">
+
+          <!-- Garis vertikal -->
+          <div style="position:absolute; left:31px; top:36px; width:2px; height:calc(100% - 54px); background:linear-gradient(to bottom, #2C3E2D 30%, #e8e2d6 30%);"></div>
+
+          <!-- Step 1 — aktif -->
+          <div style="display:flex; gap:14px; align-items:flex-start; margin-bottom:20px;">
+            <div style="width:26px; height:26px; border-radius:50%; background:#2C3E2D; display:flex; align-items:center; justify-content:center; flex-shrink:0; z-index:1;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#8BBF6A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div style="flex:1; padding-top:3px;">
+              <p style="font-size:13px; font-weight:700; color:#2C3E2D; margin:0;">Pesanan Dikonfirmasi</p>
+              <p style="font-size:11px; color:#888; margin:2px 0 0;">Hari ini, 23:59</p>
+            </div>
+          </div>
+
+          <!-- Step 2 — aktif -->
+          <div style="display:flex; gap:14px; align-items:flex-start; margin-bottom:20px;">
+            <div style="width:26px; height:26px; border-radius:50%; background:#2C3E2D; display:flex; align-items:center; justify-content:center; flex-shrink:0; z-index:1;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#8BBF6A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div style="flex:1; padding-top:3px;">
+              <p style="font-size:13px; font-weight:700; color:#2C3E2D; margin:0;">Pembayaran Diterima</p>
+              <p style="font-size:11px; color:#888; margin:2px 0 0;">Hari ini, 23:59 · Kartu Visa ••4521</p>
+            </div>
+          </div>
+
+          <!-- Step 3 — proses (pulse) -->
+          <div style="display:flex; gap:14px; align-items:flex-start; margin-bottom:20px;">
+            <div style="width:26px; height:26px; border-radius:50%; background:#9B8B6E; display:flex; align-items:center; justify-content:center; flex-shrink:0; z-index:1; animation:pulse 1.5s infinite;">
+              <div style="width:8px; height:8px; border-radius:50%; background:#fff;"></div>
+            </div>
+            <div style="flex:1; padding-top:3px;">
+              <p style="font-size:13px; font-weight:700; color:#9B8B6E; margin:0;">Diproses Penjual</p>
+              <p style="font-size:11px; color:#bbb; margin:2px 0 0;">Estimasi selesai hari ini</p>
+            </div>
+          </div>
+
+          <!-- Step 4 — belum -->
+          <div style="display:flex; gap:14px; align-items:flex-start; margin-bottom:20px;">
+            <div style="width:26px; height:26px; border-radius:50%; background:#f0ece4; border:1.5px solid #ddd; display:flex; align-items:center; justify-content:center; flex-shrink:0; z-index:1;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 0 0-8 0v2"/></svg>
+            </div>
+            <div style="flex:1; padding-top:3px;">
+              <p style="font-size:13px; font-weight:500; color:#bbb; margin:0;">Dikirim ke Kurir (JNE)</p>
+              <p style="font-size:11px; color:#ccc; margin:2px 0 0;">Estimasi besok</p>
+            </div>
+          </div>
+
+          <!-- Step 5 — belum -->
+          <div style="display:flex; gap:14px; align-items:flex-start;">
+            <div style="width:26px; height:26px; border-radius:50%; background:#f0ece4; border:1.5px solid #ddd; display:flex; align-items:center; justify-content:center; flex-shrink:0; z-index:1;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div style="flex:1; padding-top:3px;">
+              <p style="font-size:13px; font-weight:500; color:#bbb; margin:0;">Tiba di Tujuan</p>
+              <p style="font-size:11px; color:#ccc; margin:2px 0 0;">Estimasi 3–5 hari kerja</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Detail item ringkas -->
+      <div style="padding:16px 20px 4px;">
+        <p style="font-size:13px; font-weight:700; color:#2C3E2D; text-transform:uppercase; letter-spacing:0.3px; margin:0 0 12px;">Item Pesanan</p>
+        <div style="background:#fff; border-radius:16px; padding:14px 16px; border:1.5px solid #e8e2d6; display:flex; flex-direction:column; gap:10px;">
+
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <div style="width:38px; height:38px; border-radius:8px; background:#f0ece4; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="#9B8B6E" stroke-width="1.5"/><circle cx="12" cy="12" r="3" stroke="#9B8B6E" stroke-width="1.5"/></svg>
+              </div>
+              <div>
+                <p style="font-size:12px; font-weight:600; color:#2C3E2D; margin:0;">Jam Tangan Klasik Premium</p>
+                <p style="font-size:11px; color:#888; margin:0;">Hitam / M</p>
+              </div>
+            </div>
+            <span style="font-size:12px; font-weight:700; color:#2C3E2D;">Rp 350.000</span>
+          </div>
+
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <div style="width:38px; height:38px; border-radius:8px; background:#f0ece4; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="17" rx="8" ry="3" stroke="#9B8B6E" stroke-width="1.5"/><path d="M4 10 L12 6 L20 10" stroke="#9B8B6E" stroke-width="1.5"/></svg>
+              </div>
+              <div>
+                <p style="font-size:12px; font-weight:600; color:#2C3E2D; margin:0;">Sepatu Lari Sporty</p>
+                <p style="font-size:11px; color:#888; margin:0;">Putih / 42</p>
+              </div>
+            </div>
+            <span style="font-size:12px; font-weight:700; color:#2C3E2D;">Rp 450.000</span>
+          </div>
+
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <div style="width:38px; height:38px; border-radius:8px; background:#f0ece4; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <svg width="14" height="18" viewBox="0 0 18 24" fill="none"><rect x="4" y="2" width="10" height="20" rx="3" stroke="#9B8B6E" stroke-width="1.5"/></svg>
+              </div>
+              <div>
+                <p style="font-size:12px; font-weight:600; color:#2C3E2D; margin:0;">Parfum Elegan</p>
+                <p style="font-size:11px; color:#888; margin:0;">50ml / Original</p>
+              </div>
+            </div>
+            <span style="font-size:12px; font-weight:700; color:#2C3E2D;">Rp 220.000</span>
+          </div>
+
+          <div style="border-top:1px solid #f0ece4; padding-top:10px; display:flex; justify-content:space-between;">
+            <span style="font-size:13px; font-weight:800; color:#2C3E2D;">Total Dibayar</span>
+            <span style="font-size:14px; font-weight:800; color:#2C3E2D;">Rp 985.000</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Promo beli lagi -->
+      <div style="padding:14px 20px 20px;">
+        <div style="background:#2C3E2D; border-radius:16px; padding:16px 18px; display:flex; align-items:center; gap:14px;">
+          <div style="width:40px; height:40px; border-radius:10px; background:rgba(139,191,106,0.15); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8BBF6A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <div style="flex:1;">
+            <p style="color:#fff; font-size:13px; font-weight:700; margin:0 0 2px;">Kamu punya 1 voucher baru!</p>
+            <p style="color:rgba(255,255,255,0.55); font-size:11px; margin:0;">Diskon Rp 30.000 untuk pembelian berikutnya.</p>
+          </div>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom CTA -->
+    <div style="position:absolute; bottom:0; left:0; right:0; background:#fff; padding:14px 20px 20px; border-top:1px solid #e8e2d6;">
+      <div style="display:flex; gap:10px; margin-bottom:12px;">
+        <button onclick="this.style.opacity='0.7'; setTimeout(()=>this.style.opacity='1',200)" style="flex:1; background:#f0ece4; border:none; border-radius:12px; padding:13px; font-size:13px; font-weight:600; color:#2C3E2D; cursor:pointer;">Lacak Pesanan</button>
+        <button onclick="this.style.opacity='0.7'; setTimeout(()=>this.style.opacity='1',200)" style="flex:1; background:#2C3E2D; border:none; border-radius:12px; padding:13px; font-size:13px; font-weight:700; color:#fff; cursor:pointer;">Belanja Lagi →</button>
+      </div>
+
+      <div style="display:flex; justify-content:space-around; padding-top:8px; border-top:1px solid #f0ece4;">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; opacity:0.5;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2C3E2D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span style="font-size:10px; color:#2C3E2D; font-weight:500;">Home</span>
+        </div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; opacity:0.5;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2C3E2D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span style="font-size:10px; color:#2C3E2D; font-weight:500;">Cari</span>
+        </div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; opacity:0.5;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2C3E2D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <span style="font-size:10px; color:#2C3E2D; font-weight:500;">Favorit</span>
+        </div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; opacity:1;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2C3E2D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span style="font-size:10px; color:#2C3E2D; font-weight:700;">Profil</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<style>
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  70% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.92); }
+}
+@keyframes drawCheck {
+  from { stroke-dashoffset: 40; }
+  to { stroke-dashoffset: 0; }
+}
+</style>
